@@ -19,4 +19,7 @@ production:
   <<: *default
   database: prelaunchr_production
   username: social
-  password: <%= ENV['SOCIAL_DATABASE_PASSWORD'] %>
+  password: prelaunch
+ 
+
+
