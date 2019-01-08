@@ -30,7 +30,8 @@ module Prelaunch
     #     authentication:       :login,
     #     enable_starttls_auto: true  
     # }
-
+    
+    config.action_mailer.delivery_method = :smtp
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
     config.active_job.queue_adapter = :delayed_job
     
