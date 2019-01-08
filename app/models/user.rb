@@ -89,7 +89,7 @@ class User < ActiveRecord::Base
 
     def mailchimp_subscribe
         begin
-            contact = mailchimp_object.lists(Setting::MAILCHIMP_LIST_ID).members.create(body: {email_address: email, status: "subscribed"})
+            contact = mailchimp_object.lists(Setting::MAILCHIMP_LIST_ID).members.create(body: {email_address: email, status: "pending"})
         rescue Gibbon::MailChimpError => ex
             print ex.body
         end
